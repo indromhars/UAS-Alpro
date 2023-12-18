@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    
+    int total = 0;
     // Array pertama
     int array1[6] = {4, 1, 9, 7, 8, 5};
     int size1 = sizeof(array1) / sizeof(int);
@@ -28,11 +30,12 @@ int main() {
             for (int k = 0; k < size3; k++) {
                 if (array1[i] == array3[k]) {
                     cout << "Nilai yang sesuai kondisi: " << array1[i] << endl;
+                    total = total + array1[i];
                     break;  // Keluar dari loop jika nilai ditemukan dalam array3
                 }
             }
         }
     }
-
+    cout << "Hasil pertambahan nilai tersebut adalah: " << total << endl; 
     return 0;
 }
